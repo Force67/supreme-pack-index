@@ -1,0 +1,23 @@
+project("mimalloc")
+  language("C")
+  kind("StaticLib")
+  source("https://github.com/microsoft/mimalloc")
+  pubincludedirs({
+    "./mimalloc/include",
+  })
+  files({
+    "mimalloc/src/stats.c",
+    "mimalloc/src/random.c",
+    "mimalloc/src/os.c",
+    "mimalloc/src/bitmap.c",
+    "mimalloc/src/arena.c",
+    "mimalloc/src/segment-cache.c",
+    "mimalloc/src/segment.c",
+    "mimalloc/src/page.c",
+    "mimalloc/src/alloc.c",
+    "mimalloc/src/alloc-aligned.c",
+    "mimalloc/src/alloc-posix.c",
+    "mimalloc/src/heap.c",
+    "mimalloc/src/options.c",
+    "mimalloc/src/init.c",
+  })
